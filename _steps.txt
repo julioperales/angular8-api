@@ -1,0 +1,4 @@
+## GIT init ##
+git init
+git remote add origin https://github.com/julioperales/angular8-api.git
+git pull origin master
