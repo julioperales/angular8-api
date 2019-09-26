@@ -28,5 +28,5 @@ import { MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTab
     MatProgressSpinnerModule
   ]
 })
-export class MaterialModule {
+export class CustomMaterialModule {
 }
