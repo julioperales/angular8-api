@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+  password: string;
+  error: string;
+
+  constructor() {
+    
+   }
 
   ngOnInit() {
+  }
+
+  login():void{
+
   }
 
 }

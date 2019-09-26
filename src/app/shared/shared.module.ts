@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomMaterialModule } from './material/CustomMaterialModule';
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
-
+console.log("cosas shared");
 
 @NgModule({
   declarations: [],
@@ -10,7 +12,10 @@ import { CustomMaterialModule } from './material/CustomMaterialModule';
     CommonModule
   ],
   exports: [
-    CustomMaterialModule
+    
+    CustomMaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
