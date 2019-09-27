@@ -59,12 +59,10 @@ export class AuthService {
 
 /* 
   TODO 
-  - private _login
   - catch error
   - logout
   - register
   - validation import { FormBuilder, FormGroup, Validators } from 
-  - GUARDS
   - Validation
 */
 }
