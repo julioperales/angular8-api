@@ -7,14 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './shared/material/CustomMaterialModule';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule} from './modules/auth/auth.module';
-
-console.log("cosas");
-
+import { CmsModule } from './modules/cms/cms.module';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
 @NgModule({
   declarations: [
     AppComponent
-
-    
+   
   ],
   imports: [
     BrowserModule,
@@ -23,8 +22,17 @@ console.log("cosas");
     CustomMaterialModule,
     SharedModule,
     AuthModule,
+    CmsModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        
+      }
+    })  
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

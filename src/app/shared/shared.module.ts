@@ -4,7 +4,6 @@ import { CustomMaterialModule } from './material/CustomMaterialModule';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-console.log("cosas shared");
 
 @NgModule({
   declarations: [],

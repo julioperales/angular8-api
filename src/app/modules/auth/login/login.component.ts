@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
+import { AuthService} from '../../../core/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,15 +12,18 @@ export class LoginComponent implements OnInit {
   password: string;
   error: string;
 
-  constructor() {
+  constructor(
+    private authService: AuthService
+  ) {
     
    }
 
   ngOnInit() {
+    
   }
 
   login():void{
-
+    this.authService.login(this.username, this.password);
   }
 
 }
