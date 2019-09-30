@@ -13,3 +13,10 @@ ng add @angular/material
 - layout
 - modules
 - shared
+
+## MATERIAL MODULE ##
+Module in shared folder to configure Angular Material
+
+## AUTH ##
+Create Service
+npm install --save @auth0/angular-jwt

@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ErrorHandler } from '@angular/core';
 import { environment } from './../../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators'; 
 import { Router } from '@angular/router';
 
 
@@ -49,6 +50,11 @@ export class AuthService {
   this.http.post(this.apiUrl + 'auth/login', 
     data,
     {headers: headers}
+  ).pipe(    
+      catchError( (err):any => {
+
+        return [];
+      }),
   )
   .subscribe((resp: any) => {         
       localStorage.setItem(environment.tokenName, resp.token);            
@@ -59,10 +65,12 @@ export class AuthService {
 
 /* 
   TODO 
+
   - catch error
   - logout
   - register
   - validation import { FormBuilder, FormGroup, Validators } from 
+  - GUARDS
   - Validation
 */
 }
