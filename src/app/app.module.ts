@@ -8,9 +8,11 @@ import { CustomMaterialModule } from './shared/material/CustomMaterialModule';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule} from './modules/auth/auth.module';
 import { CmsModule } from './modules/cms/cms.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { RecordService } from './core/record/record.service';
+import { AuthService } from './core/auth/auth.service';
+import { AuthInterceptor } from './core/auth/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent
@@ -32,7 +34,9 @@ import { RecordService } from './core/record/record.service';
     })  
   ],
   providers: [
-    RecordService
+    RecordService,
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
