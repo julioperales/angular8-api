@@ -10,6 +10,7 @@ import { AuthModule} from './modules/auth/auth.module';
 import { CmsModule } from './modules/cms/cms.module';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
+import { RecordService } from './core/record/record.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -31,7 +32,7 @@ import { JwtModule } from '@auth0/angular-jwt';
     })  
   ],
   providers: [
-    
+    RecordService
   ],
   bootstrap: [AppComponent]
 })
