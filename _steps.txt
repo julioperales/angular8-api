@@ -20,3 +20,5 @@ Module in shared folder to configure Angular Material
 ## AUTH ##
 Create Service
 npm install --save @auth0/angular-jwt
+
+npm install --save jwt-decode

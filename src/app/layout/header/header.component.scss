@@ -1,0 +1,26 @@
+header {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    nav {
+        width: 100%;
+        display: block;
+        ul {
+            float: right;
+            display: inline-block;
+            li {
+                display: inline-block;
+                list-style: none;
+                padding: 0 1em;
+                a {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

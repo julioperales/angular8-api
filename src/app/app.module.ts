@@ -13,9 +13,11 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { RecordService } from './core/record/record.service';
 import { AuthService } from './core/auth/auth.service';
 import { AuthInterceptor } from './core/auth/auth.interceptor';
+import { HeaderComponent } from './layout/header/header.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
    
   ],
   imports: [

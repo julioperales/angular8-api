@@ -1,0 +1,13 @@
+<header>
+    <mat-toolbar color="primary">
+
+        <a routerLink="/" class="logo">RecordsApp</a>
+        <nav>
+            <ul>
+                <li *ngIf="isLogged">Hola {{user.username | titlecase}}</li>
+                <li *ngIf="isLogged"><a href="#" (click)="logout()">Logout</a></li>
+
+            </ul>
+        </nav>
+    </mat-toolbar>
+</header>

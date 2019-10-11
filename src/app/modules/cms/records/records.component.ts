@@ -9,7 +9,7 @@ import { RecordService } from '../../../core/record/record.service';
 })
 export class RecordsComponent implements OnInit {
 
-  records: Observarble<any[]>;
+  records: Observable<any[]>;
 
   constructor(
     private recordService: RecordService

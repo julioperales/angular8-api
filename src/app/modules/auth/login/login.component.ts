@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
       
     ]);
 
-    console.log("argo",this.passwordFormControl);
   }
 
   ngOnInit() {
@@ -45,7 +44,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    this.authService.login(this.username, this.password)
+    this.authService.login(this.username, this.password);
   }
 
 }
